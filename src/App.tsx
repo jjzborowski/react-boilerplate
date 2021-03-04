@@ -11,18 +11,16 @@ import './styles/styles.scss';
 
 const history = createBrowserHistory();
 
-const App = (): JSX.Element => {
-    return (
-        <Router history={ history }>
-            <Switch>
-                <Route
-                    exact
-                    path={ APP_URLS.Root }
-                    component={ AppOutline }
-                />
-            </Switch>
-        </Router>
-    );
-};
+const App = (): JSX.Element => (
+    <Router history={ history }>
+        <Switch>
+            <Route
+                exact
+                path={ APP_URLS.Root }
+                component={ AppOutline }
+            />
+        </Switch>
+    </Router>
+);
 
 export default App;

@@ -11,8 +11,8 @@ const AppOutline: React.FC = () => {
             ...exampleData,
             user: {
                 ...exampleData.user,
-                name: event.target.value
-            }
+                name: event.target.value,
+            },
         });
     };
 

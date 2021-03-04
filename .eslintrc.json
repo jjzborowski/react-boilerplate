@@ -1,0 +1,108 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "globals": {
+        "Atomics": "readonly",
+        "SharedArrayBuffer": "readonly"
+    },
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 2020,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react",
+        "@typescript-eslint",
+        "react-hooks",
+        "modules-newline"
+    ],
+    "extends": [
+        "plugin:react/recommended",
+        "airbnb",
+        "plugin:@typescript-eslint/recommended"
+    ],
+    "rules": {
+        "@typescript-eslint/explicit-module-boundary-types": "error",
+        "no-shadow": "off", // @typescript-eslint/no-shadow
+        "@typescript-eslint/no-shadow": "error",
+        "@typescript-eslint/no-unused-vars": "error",
+        "arrow-parens": ["error", "as-needed"],
+        "func-names": ["error", "as-needed"],
+        "import/extensions": [
+            "error",
+            "ignorePackages",
+            {
+                "ts": "never",
+                "tsx": "never"
+            }
+        ],
+        "import/no-extraneous-dependencies": "error",
+        "import/no-unresolved": "error",
+        "import/prefer-default-export": "off",
+        "indent": ["error", 4, { "SwitchCase": 1 }],
+        "linebreak-style": "off", // git takes care of this
+        "max-len": ["error", 150, {
+            "ignoreComments": true,
+            "ignoreUrls": true,
+            "ignoreTemplateLiterals": true,
+            "ignoreStrings": true
+        }],
+        "modules-newline/import-declaration-newline": "error",
+        "modules-newline/export-declaration-newline": "error",
+        "multiline-ternary": ["error", "always-multiline"],
+        "no-console": ["error", { "allow": ["error"] }],
+        "no-else-return": "off",
+        "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
+        "react/jsx-curly-spacing": ["error", {"when": "always"}],
+        "react/jsx-filename-extension": [
+            "warn",
+            {
+                "extensions": [
+                    ".tsx"
+                ]
+            }
+        ],
+        "react/jsx-first-prop-new-line": ["error", "multiline"],
+        "react/jsx-indent": ["error", 4],
+        "react/jsx-indent-props": ["error", 4],
+        "react/jsx-one-expression-per-line": "off",
+        "react/jsx-max-props-per-line": ["error", { "maximum": 1 }],
+        "react/jsx-props-no-spreading": "off",
+        "react/no-danger": "off",
+        "react-hooks/rules-of-hooks": "error",
+
+        // TODO: some rules that we might want to turn on in the future
+        "@typescript-eslint/ban-ts-comment": "off",
+        "@typescript-eslint/explicit-function-return-type": "off",
+        "jsx-a11y/alt-text": "off",
+        "jsx-a11y/no-static-element-interactions": "off",
+        "jsx-a11y/click-events-have-key-events": "off",
+        "no-use-before-define": "off",
+        "react/prop-types": "off",
+        "react-hooks/exhaustive-deps": "off"
+    },
+    "settings": {
+        "react": {
+            "version": "detect"
+        },
+        "import/resolver": {
+            "typescript": {},
+            "node": {
+                "extensions": [
+                    ".js",
+                    ".jsx",
+                    ".ts",
+                    ".tsx"
+                ]
+            }
+        },
+        "import/core-modules": [
+            "@ant-design/icons"
+        ]
+    }
+}

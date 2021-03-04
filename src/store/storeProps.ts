@@ -3,10 +3,10 @@ export interface userProps {
     name: string,
 }
 
-export interface exampleDataProps {
+export interface ExampleDataProps {
     user: userProps,
 }
 
-export interface rootStateProps {
-    exampleData: exampleDataProps,
+export interface RootStateProps {
+    exampleData: ExampleDataProps,
 }

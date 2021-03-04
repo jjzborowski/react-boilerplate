@@ -1,10 +1,10 @@
 import { createSelector } from 'reselect';
 import {
-    exampleDataProps,
-    rootStateProps,
+    ExampleDataProps,
+    RootStateProps,
 } from 'store/storeProps';
 
 export const getExampleDataSelector = createSelector(
-    (state: rootStateProps) => state.exampleData,
-    (exampleData: exampleDataProps) => exampleData,
+    (state: RootStateProps) => state.exampleData,
+    (exampleData: ExampleDataProps) => exampleData,
 );

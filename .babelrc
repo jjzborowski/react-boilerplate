@@ -10,13 +10,6 @@
     "@babel/preset-typescript"
   ],
   "plugins": [
-    "transform-class-properties",
-    [
-      "import",
-      {
-        "libraryName": "antd",
-        "style": true
-      }
-    ]
+    "transform-class-properties"
   ]
 }
