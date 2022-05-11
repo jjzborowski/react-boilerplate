@@ -1,26 +1,22 @@
 import AppOutline from 'components/AppOutline/AppOutline';
 import React from 'react';
 import {
-    Router,
+    BrowserRouter,
+    Routes,
     Route,
-    Switch,
 } from 'react-router-dom';
-import { createBrowserHistory } from 'history';
 import { APP_URLS } from 'constants/urls';
 import './styles/styles.scss';
 
-const history = createBrowserHistory();
-
 const App = (): JSX.Element => (
-    <Router history={ history }>
-        <Switch>
+    <BrowserRouter>
+        <Routes>
             <Route
-                exact
                 path={ APP_URLS.Root }
-                component={ AppOutline }
+                element={ <AppOutline /> }
             />
-        </Switch>
-    </Router>
+        </Routes>
+    </BrowserRouter>
 );
 
 export default App;

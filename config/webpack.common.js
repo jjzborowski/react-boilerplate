@@ -9,7 +9,7 @@ module.exports = {
         publicPath: '/',
     },
     devServer: {
-        contentBase: '../dist',
+        static: '../dist',
     },
     module: {
         rules: [
