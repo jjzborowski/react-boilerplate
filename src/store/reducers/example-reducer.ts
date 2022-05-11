@@ -1,7 +1,7 @@
 import { exampleDataTemplate } from 'constants/templates';
 import { exampleDataActionProps } from 'store/actions/actionsProps';
 import { SET_EXAMPLE_DATA } from 'store/actionTypes';
-import { ExampleDataProps } from 'store/storeProps';
+import { ExampleDataProps } from 'interfaces/storeProps';
 
 const INITIAL_STATE: ExampleDataProps = structuredClone(exampleDataTemplate);
 

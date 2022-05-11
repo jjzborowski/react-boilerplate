@@ -1,4 +1,4 @@
-import { ExampleDataProps } from 'store/storeProps';
+import { ExampleDataProps } from 'interfaces/storeProps';
 
 export interface BasicActionProps {
     type: string,
